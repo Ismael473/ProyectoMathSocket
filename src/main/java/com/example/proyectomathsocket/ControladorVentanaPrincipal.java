@@ -6,14 +6,14 @@ import javafx.stage.Stage;
 
 public class ControladorVentanaPrincipal {
     @FXML
-    private Label welcomeText;
+    private Label botonDeDado;
     @FXML
     private Label botonDeSalida;
 
     @FXML
-    protected void onHelloButtonClick() {
+    protected void onDadoButtonClick() {
         int Numero = (int) (Math.random()*4+1);
-        welcomeText.setText(String.valueOf(Numero));
+        botonDeDado.setText(String.valueOf(Numero));
     }
 
     @FXML
