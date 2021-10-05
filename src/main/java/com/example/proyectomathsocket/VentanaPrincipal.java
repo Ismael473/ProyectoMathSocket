@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class VentanaPrincipal extends Application {
 
+    public Integer posX1 = 30;
+    public Integer posY1 = 50;
 
 
     @Override
@@ -372,6 +374,8 @@ public class VentanaPrincipal extends Application {
         rectangulo55.setStroke(Color.BLACK);
 
 
+
+
         //labels
         dado.setLayoutX(1025);
         dado.setLayoutY(0);
@@ -391,7 +395,19 @@ public class VentanaPrincipal extends Application {
         btnDado.setOnAction(event ->{
             int numero = (int)(Math.random()*4+1);// da valores de 1 a 4
             dado.setText(String.valueOf(numero));
+            posX1 = posX1+numero;
+
+            Rectangle rp1 = new Rectangle();
+            rp1.setX(posX1);
+            rp1.setY(posY1);
+            rp1.setWidth(30);
+            rp1.setHeight(30);
+            rp1.setFill(Color.RED);
+
+            root.getChildren().add(rp1);
         });
+
+
 
         //boton de salida
         btnSalida.setText("Salida!!!");
